@@ -16,5 +16,6 @@ func routes(_ app: Application) throws {
         return try await req.view.render("index", HomeContext(name: "Helder Sérvio", parsedPosts: parsedPosts))
     }
 
-    //try app.register(collection: TodoController())
+    try app.register(collection: PostsController())
+    try app.register(collection: TagsController())
 }

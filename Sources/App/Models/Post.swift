@@ -13,8 +13,8 @@ final class Post: Model, Content {
 	@Field(key: "content")
 	var content: String
 
-	// @Siblings(through: PostTag.self, from \.$post, to: \.$tag)
-	// var tags: [Tag]
+	@Siblings(through: PostTag.self, from: \.$post, to: \.$tag)
+	var tags: [Tag]
 
     init() { }
 

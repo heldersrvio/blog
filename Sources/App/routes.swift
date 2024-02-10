@@ -6,5 +6,5 @@ func routes(_ app: Application) throws {
         try await req.view.render("index", ["name": "Helder Sérvio"])
     }
 
-    try app.register(collection: TodoController())
+    //try app.register(collection: TodoController())
 }

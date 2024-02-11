@@ -22,6 +22,10 @@ func routes(_ app: Application) throws {
 		try await req.view.render("About", ["name": AUTHOR_NAME])
 	}
 
+	app.get("cv") { req async throws -> View in
+		try await req.view.render("CV", ["name": AUTHOR_NAME])
+	}
+
     try app.register(collection: PostsController())
     try app.register(collection: TagsController())
 }

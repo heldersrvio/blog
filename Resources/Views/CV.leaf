@@ -1,0 +1,27 @@
+#extend("Master"):
+	#export("Content"):
+		<div class="page" id="cv-page">
+			<h1>CV</h1>
+			<br></br>
+			<h2>Education</h2>
+			<h3><strong>Universidade Federal do Piauí</strong> (03/2018 - 05/2022)</h3>
+			<p>Bachelor's Degree in Computer Science</p>
+			<br></br>
+			<h2>Work Experience</h2>
+			<h3><strong>RevGás</strong> (06/2021 - 05/2022 as an intern, 05/2022 - 03/2023)</h3>
+			<p>Systems Analyst with DevOps focus</p>
+			<h3><strong>Trades.org</strong> (03/2023 - present)</h3>
+			<p>Software Engineer with DevOps focus</p>
+			<br></br>
+			<h2>Technical Skills</h2>
+			<ul>
+				<li>Linux</li>
+				<li>AWS</li>
+				<li>Docker</li>
+				<li>Infrastructure as Code (AWS CDK and Pulumi)</li>
+				<li>Git</li>
+				<li>TypeScript / JavaScript</li>
+			</ul>
+		</div>
+	#endexport
+#endextend

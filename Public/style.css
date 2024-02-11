@@ -98,4 +98,9 @@ nav a:hover {
   margin-bottom: 7rem;
 }
 
+#cv-page.page ul {
+  margin: 0;
+  list-style-type: '- ';
+  padding: 0;
+}
 

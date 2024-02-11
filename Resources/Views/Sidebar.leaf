@@ -1,5 +1,6 @@
 <aside>
-	<h1>#(name)</h1>
+	<a id="profile-image-container" href="/"><img src="avatar-1.jpg" /></a>
+	<a id="title-container" href="/"><h1>#(name)</h1></a>
 	<nav>
 	  <ul>
 		<li><a href="/">Home</a></li>
@@ -7,4 +8,5 @@
 		<li><a href="/cv">CV</a></li>
 	  </ul>
 	</nav>
+	<span>living in Cuenca 🇪🇨</span>
 </aside>

@@ -1,16 +1,19 @@
 #extend("Master"):
 	#export("Content"):
-		<h1>About</h1>
-		<p>Hello, I'm Helder. I'm a Brazilian software engineer currently living in Ecuador. I like drinking coffee, reading books and solving hard problems. I speak a few different languages with varying degrees of proficiency (only fluent in my native Portuguese and English) and I plan to spend my 20s living in different places around the world. I'm interested in a lot of things and I'd love to spend all my mornings strolling out and about, enjoying the weather, but I'll never have time for that as long as I have to work, so my dream is to get rich and be able to do whatever I want with my time.</p>
-		<span><strong>Things I like:</strong>
-		<p><strong>Books:</strong> The Count of Monte Cristo, Bowling Alone, The Subtle Art of Not Giving a F*ck, Loneliness: Human Nature and the Need for Social Connection, On Being Certain: Believing You Are Right Even When You're Not, Nonviolent Communication: A Language of Life, A Million Miles in a Thousand Years, Flow, Why Balloons Rise and Apples Fall, and The Millionaire Fastlane.
-		<p><strong>Light novels:</strong> やはり俺の青春ラブコメが間違っている.</p>
-		<p><strong>Manga:</strong> Iris Zero, and ヨコハマ買い出し紀行.</p>
-		<p><strong>Visual novels:</strong> Rewrite, and Litte Busters!.</p>
-		<p><strong>Anime:</strong> Sword Art Online, and のんのんびより.</p>
-		<p><strong>Cartoons:</strong> Steven Universe, and We Bare Bears.</p>
-		<p><strong>TV Series:</strong> Stranger Things, Fringe, and Friday Night Lights.</p>
-		<p><strong>Movies:</strong> The Lion, the Witch and The Wardrobe, National Treasure, Jumanji (the original), Ratatouille, Mulan, Treasure Planet, and Peter Pan (2003).</p>
-		<p><strong>Misc:</strong> Steampunk or "gaslamp fantasy", strolling, sunny mornings, jazz, enigmatic problems, adventure, fantastical worlds and places, cozy libraries and coffee shops, and nature.</p>
+		<div class="page">
+			<h1>About</h1>
+			<p>Hello, I'm Helder. I'm a Brazilian software engineer currently living in Ecuador. I like drinking coffee, reading books and solving hard problems. I speak a few different languages with varying degrees of proficiency (only fluent in my native Portuguese, and English) and I plan to spend my 20s living in different places around the world. I'm interested in a lot of things and I'd love to spend all my mornings strolling out and about, enjoying the weather, but I'll never have time for that as long as I have to work, so my dream is to get rich and be able to do whatever I want with my time.</p>
+			<br></br>
+			<span><strong>Things I like:</strong>
+			<p><strong>Books:</strong> The Count of Monte Cristo, Bowling Alone, The Subtle Art of Not Giving a F*ck, Loneliness: Human Nature and the Need for Social Connection, On Being Certain: Believing You Are Right Even When You're Not, Nonviolent Communication: A Language of Life, A Million Miles in a Thousand Years, Flow, Why Balloons Rise and Apples Fall, and The Millionaire Fastlane.
+			<p><strong>Light novels:</strong> やはり俺の青春ラブコメが間違っている.</p>
+			<p><strong>Manga:</strong> Iris Zero, and ヨコハマ買い出し紀行.</p>
+			<p><strong>Visual novels:</strong> Rewrite, and Litte Busters!.</p>
+			<p><strong>Anime:</strong> Sword Art Online, and のんのんびより.</p>
+			<p><strong>Cartoons:</strong> Steven Universe, and We Bare Bears.</p>
+			<p><strong>TV Series:</strong> Stranger Things, Fringe, and Friday Night Lights.</p>
+			<p><strong>Movies:</strong> The Lion, the Witch and The Wardrobe, National Treasure, Jumanji (the original), Ratatouille, Mulan, Treasure Planet, and Peter Pan (2003).</p>
+			<p><strong>Misc:</strong> Steampunk or "gaslamp fantasy", strolling, sunny mornings, jazz, enigmatic problems, adventure, fantastical worlds and places, cozy libraries and coffee shops, and nature.</p>
+		</div>
 	#endexport
 #endextend

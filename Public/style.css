@@ -1,0 +1,101 @@
+:root {
+  width: 100%;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  background-color: #f6eee3;
+  border-top: 3px solid #4b2100;
+  font-family: 'Roboto Slab', serif;
+}
+
+.page {
+  width: 80%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-right: 3rem;
+  padding-left: 0;
+}
+
+.page h1, .page h2 {
+  text-align: center;
+}
+
+aside {
+  width: 20%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+aside #profile-image-container {
+  width: 90%;
+}
+
+aside #title-container {
+  line-height: 2.2rem;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+aside #title-container h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+aside span {
+  font-size: 0.8rem;
+}
+
+nav {
+  margin-bottom: 3rem;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+nav ul li {
+  margin: 0.2rem 0;
+}
+
+nav a {
+  text-decoration:none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.post-tags {
+  display: flex;
+  flex-direction: row;
+}
+
+.post-tags span {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.post-tag {
+  margin: 0 5px;
+  text-decoration: underline;
+}
+
+.post {
+  margin-bottom: 7rem;
+}
+
+

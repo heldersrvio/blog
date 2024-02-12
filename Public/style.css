@@ -82,12 +82,12 @@ aside nav a:hover {
 .post-tags {
   display: flex;
   flex-direction: row;
-  margin-top: 15px;
 }
 
 .post-tags span {
   display: block;
   font-size: 0.85rem;
+  color: #8e8e8e;
 }
 
 .post-tag {
@@ -97,6 +97,20 @@ aside nav a:hover {
 
 .post {
   margin-bottom: 7rem;
+}
+
+.post h2 a {
+  text-decoration: none;
+}
+
+.post h2 a:hover {
+  text-decoration: underline;
+}
+
+.post .post-date {
+  font-size: 0.85rem;
+  color: #8e8e8e;
+  margin-top: 15px;
 }
 
 #cv-page.page ul {

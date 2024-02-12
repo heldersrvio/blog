@@ -11,8 +11,16 @@ struct HomeContext: Encodable {
 	var nextPage: Int?
 }
 
+struct PostContext: Encodable {
+	var name: String
+	var post: ParsedPost
+}
+
 func routes(_ app: Application) throws {
     app.get { req async throws -> View in
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "MMM d, yyyy"
+
 		let pageQuery = req.query["page"] ?? "1"
 		let page = Int(pageQuery) ?? 1
 		let posts = try await Post.query(on: req.db).with(\.$tags).paginate(PageRequest(page: page, per: POSTS_PER_PAGE))
@@ -20,7 +28,8 @@ func routes(_ app: Application) throws {
 		let nextPage = page * POSTS_PER_PAGE < posts.metadata.total ? page + 1 : nil
 		let parsedPosts = posts.items.map { post in
 			let tags = post.tags.map { $0.name }
-			return ParsedPost(title: post.title, paragraphs: post.content.components(separatedBy: "\n"), tags: tags)
+			let date = dateFormatter.string(from: post.createdAt!)
+			return ParsedPost(id: post.id, title: post.title, paragraphs: post.content.components(separatedBy: "\n"), tags: tags, date: date)
 		}
         return try await req.view.render("index", HomeContext(name: AUTHOR_NAME, parsedPosts: parsedPosts, previousPage: previousPage, nextPage: nextPage))
     }
@@ -35,4 +44,17 @@ func routes(_ app: Application) throws {
 
     try app.register(collection: PostsController())
     try app.register(collection: TagsController())
+
+	app.get(":post_id") { req async throws -> View in
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "MMM d, yyyy"
+
+		if let post = try await Post.query(on: req.db).filter(\.$id == req.parameters.get("post_id")!).with(\.$tags).first() {
+			let tags = post.tags.map { $0.name }
+			let date = dateFormatter.string(from: post.createdAt!)
+			let parsedPost = ParsedPost(id: post.id, title: post.title, paragraphs: post.content.components(separatedBy: "\n"), tags: tags, date: date)
+			return try await req.view.render("Post", PostContext(name: AUTHOR_NAME, post: parsedPost))
+		}
+		throw Abort(.notFound)
+	}
 }

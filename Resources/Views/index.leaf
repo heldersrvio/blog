@@ -1,8 +1,8 @@
 #extend("Master"):
 	#export("Content"):
-		<div class="page">
+		<section class="page">
 			#for(post in parsedPosts):
-				<div class="post">
+				<article class="post">
 					<h2>#(post.title)</h2>
 					#for(paragraph in post.paragraphs):
 						<p>#(paragraph)</p>
@@ -15,8 +15,16 @@
 						#endfor
 					#endif
 					</div>
-				</div>
+				</article>
 			#endfor
-		</div>
+			<nav class="posts-navigation">
+				#if(previousPage):
+					<a class="previous-page" href="/?page=#(previousPage)">« Previous</a>
+				#endif
+				#if(nextPage):
+					<a class="next-page" href="/?page=#(nextPage)">Next »</a>
+				#endif
+			</nav>
+		</section>
 	#endexport
 #endextend

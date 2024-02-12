@@ -1,6 +1,6 @@
 #extend("Master"):
 	#export("Content"):
-		<div class="page" id="cv-page">
+		<article class="page" id="cv-page">
 			<h1>CV</h1>
 			<br></br>
 			<h2>Education</h2>
@@ -22,6 +22,6 @@
 				<li>Git</li>
 				<li>TypeScript / JavaScript</li>
 			</ul>
-		</div>
+		</article>
 	#endexport
 #endextend

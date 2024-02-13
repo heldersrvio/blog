@@ -4,4 +4,10 @@
 
 {$DOMAIN:localhost}:{$PROXY_PORT:8081}
 
-reverse_proxy :{$APPLICATION_PORT:8080}
+@denied {
+	not client_ip private_ranges
+	path /posts* /tags*
+}
+
+abort @denied
+reverse_proxy {$APPLICATION_HOST}:{$APPLICATION_PORT:8080}

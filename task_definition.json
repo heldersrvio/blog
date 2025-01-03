@@ -47,7 +47,7 @@
         },
         {
             "name": "caddy",
-            "image": "caddy:2.7.6-alpine",
+            "image": "caddy:2.8.4-alpine",
             "cpu": 102,
             "memory": 256,
             "memoryReservation": 256,
